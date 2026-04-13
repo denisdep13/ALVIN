@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алвин+ — компания по производству светопрозрачных конструкций</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* === Кнопка === */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 2px solid #e8651a;
+            color: #e8651a;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e8651a;
+            color: #fff;
+        }
+
+        /* === Разделители === */
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: #e8651a;
+            margin: 15px auto 40px;
+        }
+
+        .section-accent {
+            width: 4px;
+            height: 40px;
+            background: #e8651a;
+            margin-bottom: 20px;
+        }
+
+        /* ==================== ШАПКА ==================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo img {
+            height: 45px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav a:hover {
+            color: #e8651a;
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero .btn {
+            color: #fff;
+            border-color: #e8651a;
+        }
+
+        .hero .btn:hover {
+            background: #e8651a;
+        }
+
+        /* ==================== УСЛУГИ ==================== */
+        .services {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .service-icon {
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* ==================== ПРЕИМУЩЕСТВА ==================== */
+        .advantages {
+            background: #444;
+        }
+
+        .advantages-inner {
+            display: flex;
+            min-height: 500px;
+        }
+
+        .advantages-text {
+            flex: 0 0 45%;
+            padding: 60px 40px 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .advantages-item {
+            display: flex;
+            gap: 15px;
+            color: #fff;
+        }
+
+        .advantages-arrow {
+            color: #e8651a;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .advantages-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .advantages-item p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .advantages-image {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .advantages-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ==================== ЗАКАЗЧИКИ ==================== */
+        .clients {
+            padding: 80px 0;
+        }
+
+        .clients-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .clients-grid img {
+            height: 50px;
+            width: auto;
+            opacity: 0.7;
+        }
+
+        .clients-grid img:hover {
+            opacity: 1;
+        }
+
+        /* ==================== О КОМПАНИИ ==================== */
+        .about {
+            position: relative;
+        }
+
+        .about-inner {
+            position: relative;
+        }
+
+        .about-bg {
+            position: relative;
+        }
+
+        .about-bg img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .about-left {
+            flex: 1;
+            color: #fff;
+        }
+
+        .about-left h2 {
+            text-align: left;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-left p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .about-left .btn {
+            margin-top: 15px;
+            color: #fff;
+            border-color: #e8651a;
+        }
+
+        .about-left .btn:hover {
+            background: #e8651a;
+        }
+
+        .about-right {
+            flex: 0 0 380px;
+            color: #fff;
+        }
+
+        .about-right h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #e8651a;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .about-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #e8651a;
+            border-radius: 2px;
+        }
+
+        /* ==================== СТАТИСТИКА ==================== */
+        .stats {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .stats h2 {
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 56px;
+            font-weight: 700;
+            color: #e8651a;
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+
+        /* ==================== ЦИТАТА ==================== */
+        .quote {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .quote blockquote {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #999;
+        }
+
+        /* ==================== ПРОЕКТЫ ==================== */
+        .projects {
+            padding: 80px 0;
+            background: #f5f5f5;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 15px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            background: #ddd;
+        }
+
+        .project-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project-link {
+            font-size: 12px;
+            color: #e8651a;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ==================== ФУТЕР ==================== */
+        .footer {
+            background: #f0f0f0;
+            padding: 60px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .footer-form {
+            flex: 1;
+        }
+
+        .footer-form h2 {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .footer-form .section-accent {
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-row input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            font-family: inherit;
+            background: #fff;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            font-family: inherit;
+            min-height: 120px;
+            resize: vertical;
+            margin-bottom: 15px;
+            background: #fff;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-form .btn {
+            background: #e8651a;
+            color: #fff;
+            border-color: #e8651a;
+        }
+
+        .footer-form .btn:hover {
+            background: #d05a15;
+        }
+
+        .footer-contacts {
+            flex: 0 0 350px;
+            padding-top: 60px;
+        }
+
+        .footer-contacts p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            color: #e8651a;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ====================================================
+           АДАПТИВ: ПЛАНШЕТ (до 900px)
+           ==================================================== */
+        @media (max-width: 900px) {
+            .header-inner {
+                height: 60px;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .nav {
+                gap: 20px;
+            }
+
+            .nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                margin-top: 60px;
+                min-height: 450px;
+                height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+                letter-spacing: 5px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+                letter-spacing: 3px;
+            }
+
+            .hero-desc {
+                font-size: 14px;
+            }
+
+            .hero-desc br {
+                display: none;
+            }
+
+            .services {
+                padding: 50px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .advantages-inner {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .advantages-text {
+                padding: 40px 30px;
+                flex: none;
+            }
+
+            .advantages-image {
+                height: 300px;
+            }
+
+            /* О компании: переделываем в поток */
+            .about-bg img {
+                height: auto;
+                min-height: 0;
+            }
+
+            .about-content {
+                position: relative;
+                flex-direction: column;
+                gap: 30px;
+                background: rgba(0, 0, 0, 0.7);
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .about-bg {
+                display: none;
+            }
+
+            .about {
+                background: #333;
+            }
+
+            .about-right {
+                flex: none;
+                width: 100%;
+            }
+
+            .stats-grid {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 44px;
+            }
+
+            .projects {
+                padding: 50px 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-contacts {
+                flex: none;
+                padding-top: 0;
+                width: 100%;
+            }
+
+            .quote blockquote {
+                font-size: 18px;
+            }
+        }
+
+        /* ====================================================
+           АДАПТИВ: ТЕЛЕФОН (до 600px)
+           ==================================================== */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            /* --- Шапка --- */
+            .header-inner {
+                height: 56px;
+                flex-wrap: wrap;
+            }
+
+            .logo img {
+                height: 30px;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            .nav a {
+                font-size: 11px;
+                letter-spacing: 0;
+            }
+
+            /* --- Hero --- */
+            .hero {
+                margin-top: 56px;
+                min-height: 400px;
+                height: 80vh;
+            }
+
+            .hero-content {
+                padding: 0 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+                letter-spacing: 4px;
+                margin-bottom: 8px;
+            }
+
+            .hero-subtitle {
+                font-size: 13px;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+
+            .hero-desc {
+                font-size: 13px;
+                line-height: 1.6;
+                margin-bottom: 25px;
+            }
+
+            .hero-desc br {
+                display: none;
+            }
+
+            .btn {
+                padding: 10px 24px;
+                font-size: 13px;
+            }
+
+            /* --- Услуги --- */
+            .services {
+                padding: 40px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .service-card {
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                text-align: left;
+            }
+
+            .service-icon {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+
+            .service-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* --- Преимущества --- */
+            .advantages-text {
+                padding: 30px 20px;
+                gap: 25px;
+            }
+
+            .advantages-item h3 {
+                font-size: 15px;
+            }
+
+            .advantages-item p {
+                font-size: 13px;
+            }
+
+            .advantages-image {
+                height: 220px;
+            }
+
+            /* --- Заказчики --- */
+            .clients {
+                padding: 50px 0;
+            }
+
+            .clients-grid {
+                gap: 20px;
+            }
+
+            .clients-grid img {
+                height: 35px;
+            }
+
+            /* --- О компании --- */
+            .about-content {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                gap: 25px;
+            }
+
+            .about-left h2 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            .about-left p {
+                font-size: 13px;
+            }
+
+            .about-right h3 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .about-list li {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            /* --- Статистика --- */
+            .stats {
+                padding: 40px 0;
+            }
+
+            .stats h2 {
+                margin-bottom: 25px;
+            }
+
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            /* --- Цитата --- */
+            .quote {
+                padding: 50px 0;
+            }
+
+            .quote blockquote {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+
+            .quote blockquote br {
+                display: none;
+            }
+
+            .quote-author {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            /* --- Проекты --- */
+            .projects {
+                padding: 40px 0;
+            }
+
+            .section-line {
+                margin: 10px auto 25px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .project-card {
+                padding: 12px;
+            }
+
+            .project-card img {
+                height: 180px;
+            }
+
+            /* --- Футер --- */
+            .footer {
+                padding: 40px 0;
+            }
+
+            .footer-form h2 {
+                font-size: 22px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-row input {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            textarea {
+                padding: 10px 12px;
+                min-height: 100px;
+                font-size: 14px;
+            }
+
+            .checkbox-label {
+                font-size: 11px;
+            }
+
+            .footer-contacts p {
+                font-size: 13px;
+            }
+        }
+
+        /* ====================================================
+           АДАПТИВ: МАЛЕНЬКИЙ ТЕЛЕФОН (до 380px)
+           ==================================================== */
+        @media (max-width: 380px) {
+            .hero-content h1 {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+            }
+
+            .nav a {
+                font-size: 10px;
+                gap: 8px;
+            }
+
+            .nav {
+                gap: 8px;
+            }
+
+            .stat-number {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Алвин+">
+        </a>
+        <nav class="nav">
+            <a href="#hero">Главная</a>
+            <a href="#about">О компании</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Первый экран -->
+<section class="hero" id="hero">
+    <img src="hero.jpg" alt="Алвин+" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Алвин+</h1>
+        <p class="hero-subtitle">Новые возможности</p>
+        <p class="hero-desc">Динамично развивающаяся компания по производству светопрозрачных конструкций.<br>
+            Мы занимаемся реализацией проектов по производству<br>
+            и монтажу светопрозрачных конструкций.</p>
+        <a href="#about" class="btn">О компании</a>
+    </div>
+</section>
+
+<!-- Услуги -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="8" y="16" width="48" height="40" rx="2"/>
+                        <line x1="8" y1="32" x2="56" y2="32"/>
+                        <line x1="24" y1="16" x2="24" y2="56"/>
+                        <line x1="40" y1="16" x2="40" y2="56"/>
+                        <polygon points="32,4 8,16 56,16"/>
+                    </svg>
+                </div>
+                <p>Полный комплекс работ от проектирования до монтажа (по ГОСТу)</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="12" y="20" width="40" height="36" rx="2"/>
+                        <line x1="12" y1="36" x2="52" y2="36"/>
+                        <line x1="32" y1="20" x2="32" y2="56"/>
+                        <path d="M20 8 L32 2 L44 8"/>
+                        <circle cx="32" cy="28" r="4"/>
+                    </svg>
+                </div>
+                <p>Изготовление огнестойких светопрозрачных конструкций</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="10" y="12" width="44" height="44" rx="2"/>
+                        <line x1="10" y1="28" x2="54" y2="28"/>
+                        <line x1="10" y1="40" x2="54" y2="40"/>
+                        <line x1="27" y1="12" x2="27" y2="56"/>
+                        <line x1="40" y1="12" x2="40" y2="56"/>
+                    </svg>
+                </div>
+                <p>Изготовление структурного остекления</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="6" y="14" width="52" height="42" rx="2"/>
+                        <line x1="6" y1="30" x2="58" y2="30"/>
+                        <line x1="6" y1="42" x2="58" y2="42"/>
+                        <line x1="22" y1="14" x2="22" y2="56"/>
+                        <line x1="42" y1="14" x2="42" y2="56"/>
+                        <circle cx="32" cy="8" r="4"/>
+                    </svg>
+                </div>
+                <p>Изготовление внутренних светопрозрачных конструкций из алюминия</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="8" y="24" width="48" height="32" rx="2"/>
+                        <line x1="8" y1="40" x2="56" y2="40"/>
+                        <polyline points="8,24 32,8 56,24"/>
+                        <line x1="20" y1="40" x2="20" y2="56"/>
+                        <line x1="44" y1="40" x2="44" y2="56"/>
+                    </svg>
+                </div>
+                <p>Изготовление стеклянных ограждений и козырьков</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 64 64" width="48" height="48" fill="none" stroke="#e8651a" stroke-width="2">
+                        <rect x="4" y="8" width="56" height="48" rx="2"/>
+                        <line x1="4" y1="20" x2="60" y2="20"/>
+                        <line x1="4" y1="32" x2="60" y2="32"/>
+                        <line x1="4" y1="44" x2="60" y2="44"/>
+                        <line x1="20" y1="8" x2="20" y2="56"/>
+                        <line x1="40" y1="8" x2="40" y2="56"/>
+                    </svg>
+                </div>
+                <p>Фасадное остекление из алюминия</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Преимущества -->
+<section class="advantages">
+    <div class="advantages-inner">
+        <div class="advantages-text">
+            <div class="advantages-item">
+                <span class="advantages-arrow">&raquo;</span>
+                <div>
+                    <h3>Качественное управление строительством</h3>
+                    <p>Профессиональный коллектив, эффективное управление ресурсами.</p>
+                </div>
+            </div>
+            <div class="advantages-item">
+                <span class="advantages-arrow">&raquo;</span>
+                <div>
+                    <h3>Гарантия на работы и конструкции</h3>
+                    <p>До 5 лет гарантии на работы. Оформление банковской гарантии исполнения обязательств.</p>
+                </div>
+            </div>
+            <div class="advantages-item">
+                <span class="advantages-arrow">&raquo;</span>
+                <div>
+                    <h3>Собственные производственные мощности</h3>
+                    <p>Производство светопрозрачных конструкций любой сложности на современном оборудовании в городе Чехов.</p>
+                </div>
+            </div>
+        </div>
+        <div class="advantages-image">
+            <img src="production.jpg" alt="Производство">
+        </div>
+    </div>
+</section>
+
+<!-- Заказчики -->
+<section class="clients" id="clients">
+    <div class="container">
+        <h2>Наши заказчики</h2>
+        <div class="section-line"></div>
+        <div class="clients-grid">
+            <img src="client1.png" alt="Заказчик 1">
+            <img src="client2.png" alt="Заказчик 2">
+            <img src="client3.jpg" alt="Заказчик 3">
+            <img src="client4.png" alt="Заказчик 4">
+            <img src="client5.png" alt="Заказчик 5">
+        </div>
+    </div>
+</section>
+
+<!-- О компании -->
+<section class="about" id="about">
+    <div class="about-inner">
+        <div class="about-bg">
+            <img src="about.jpg" alt="О компании">
+            <div class="about-overlay"></div>
+        </div>
+        <div class="container about-content">
+            <div class="about-left">
+                <div class="section-accent"></div>
+                <h2>О нашей компании</h2>
+                <p>Компания «Алвин+» осуществляет услуги комплексного остекления объектов социальной и коммерческой инфраструктуры. В портфолио компании жилые комплексы эконом и бизнес класса, объекты образования, медицины и спорта.</p>
+                <p>Собственное производство компании изготавливает светопрозрачные конструкции на основе алюминиевых профильных систем российского и европейского производства.</p>
+                <a href="#projects" class="btn">Смотреть наши работы</a>
+            </div>
+            <div class="about-right">
+                <h3>Что мы делаем</h3>
+                <ul class="about-list">
+                    <li>Полный комплекс работ от проектирования до монтажа (по ГОСТу)</li>
+                    <li>Изготовление огнестойких светопрозрачных конструкций</li>
+                    <li>Изготовление структурного остекления</li>
+                    <li>Изготовление внутренних светопрозрачных конструкций из алюминия</li>
+                    <li>Изготовление стеклянных ограждений и козырьков</li>
+                    <li>Фасадное остекление из алюминия</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Статистика -->
+<section class="stats">
+    <div class="container">
+        <h2>Только лучшее</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">10</span>
+                <span class="stat-label">лет работы</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">60</span>
+                <span class="stat-label">проектов</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">75</span>
+                <span class="stat-label">рабочий состав</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">20</span>
+                <span class="stat-label">ИТР</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Цитата -->
+<section class="quote">
+    <div class="container">
+        <blockquote>
+            &laquo;Мы реализуем решения,<br>
+            которые становятся частью архитектуры.&raquo;
+        </blockquote>
+        <p class="quote-author">Команда Алвин+</p>
+    </div>
+</section>
+
+<!-- Проекты -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2>Наши проекты</h2>
+        <div class="section-line"></div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Проект 1">
+                <h4>Проект 1</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Проект 2">
+                <h4>Проект 2</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Проект 3">
+                <h4>Проект 3</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project4.jpg" alt="Проект 4">
+                <h4>Проект 4</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project5.jpg" alt="Проект 5">
+                <h4>Проект 5</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project6.jpg" alt="Проект 6">
+                <h4>Проект 6</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project7.jpg" alt="Проект 7">
+                <h4>Проект 7</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project8.jpg" alt="Проект 8">
+                <h4>Проект 8</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+            <div class="project-card">
+                <img src="project9.jpg" alt="Проект 9">
+                <h4>Проект 9</h4>
+                <a href="#" class="project-link">о проекте</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Форма + Контакты -->
+<footer class="footer" id="contacts">
+    <div class="container footer-inner">
+        <div class="footer-form">
+            <h2>Напишите нам</h2>
+            <div class="section-accent"></div>
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Имя">
+                    <input type="email" placeholder="Email">
+                </div>
+                <textarea placeholder="Текст сообщения"></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox">
+                    Я принимаю пользовательское соглашение и политику конфиденциальности
+                </label>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+        <div class="footer-contacts">
+            <p><span class="contact-icon">&#9679;</span> г. Чехов, ул. Гарнаева, 16, Чехов</p>
+            <p><span class="contact-icon">&#9742;</span> +7 (496) 727-59-02</p>
+            <p><span class="contact-icon">&#9993;</span> info@alvinplus.ru</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
