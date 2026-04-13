@@ -608,6 +608,19 @@ textarea {
 
 /* ==================== АДАПТИВ ==================== */
 @media (max-width: 900px) {
+    .header-inner {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -621,21 +634,31 @@ textarea {
     }
 
     .advantages-text {
+        flex: none;
         padding: 40px 20px;
     }
 
     .advantages-image {
-        height: 300px;
+        height: 320px;
+    }
+
+    .advantages-image img {
+        height: 100%;
+    }
+
+    .about {
+        min-height: auto;
     }
 
     .about-bg img {
-        height: auto;
-        min-height: 700px;
+        height: 700px;
     }
 
     .about-content {
+        position: absolute;
         flex-direction: column;
-        position: relative;
+        align-items: flex-start;
+        gap: 30px;
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -647,15 +670,48 @@ textarea {
 
     .footer-inner {
         flex-direction: column;
+        gap: 30px;
     }
 
     .footer-contacts {
         flex: none;
         padding-top: 0;
+        width: 100%;
     }
 }
 
 @media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    .nav {
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 520px;
+        padding: 60px 0;
+    }
+
     .hero-content h1 {
         font-size: 32px;
         letter-spacing: 4px;
@@ -663,37 +719,109 @@ textarea {
 
     .hero-subtitle {
         font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
     }
 
     .hero-desc {
         font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-desc br {
+        display: none;
+    }
+
+    .services {
+        padding: 60px 0;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .advantages-text {
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .advantages-image {
+        height: 240px;
+    }
+
+    .clients {
+        padding: 60px 0;
+    }
+
+    .clients-grid {
+        gap: 20px;
+    }
+
+    .clients-grid img {
+        height: 36px;
+    }
+
+    .about-bg img {
+        height: 820px;
+    }
+
+    .about-content {
+        gap: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .about-left h2,
+    .footer-form h2,
+    h2 {
+        font-size: 22px;
+    }
+
+    .about-left p,
+    .about-list li {
+        font-size: 14px;
+    }
+
+    .stats-grid {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 42px;
+    }
+
+    .quote {
+        padding: 60px 0;
+    }
+
+    .quote blockquote {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .projects {
+        padding: 60px 0;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .stats-grid {
-        gap: 40px;
-    }
-
-    .nav {
-        gap: 15px;
-    }
-
-    .nav a {
-        font-size: 12px;
+    .project-card img {
+        height: 220px;
     }
 
     .form-row {
         flex-direction: column;
     }
 
-    h2 {
-        font-size: 22px;
+    .footer {
+        padding: 50px 0;
     }
 }
