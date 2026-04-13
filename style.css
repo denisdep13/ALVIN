@@ -1,0 +1,699 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* === Кнопка === */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 2px solid #e8651a;
+    color: #e8651a;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e8651a;
+    color: #fff;
+}
+
+/* === Линия-разделитель === */
+.section-line {
+    width: 50px;
+    height: 3px;
+    background: #e8651a;
+    margin: 15px auto 40px;
+}
+
+.section-accent {
+    width: 4px;
+    height: 40px;
+    background: #e8651a;
+    margin-bottom: 20px;
+}
+
+/* ==================== ШАПКА ==================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav a:hover {
+    color: #e8651a;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.hero-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero .btn {
+    color: #fff;
+    border-color: #e8651a;
+}
+
+.hero .btn:hover {
+    background: #e8651a;
+}
+
+/* ==================== УСЛУГИ ==================== */
+.services {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ==================== ПРЕИМУЩЕСТВА ==================== */
+.advantages {
+    background: #444;
+}
+
+.advantages-inner {
+    display: flex;
+    min-height: 500px;
+}
+
+.advantages-text {
+    flex: 0 0 45%;
+    padding: 60px 40px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+}
+
+.advantages-item {
+    display: flex;
+    gap: 15px;
+    color: #fff;
+}
+
+.advantages-arrow {
+    color: #e8651a;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.advantages-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.advantages-item p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.advantages-image {
+    flex: 1;
+}
+
+.advantages-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================== ЗАКАЗЧИКИ ==================== */
+.clients {
+    padding: 80px 0;
+}
+
+.clients-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.clients-grid img {
+    height: 50px;
+    width: auto;
+    opacity: 0.7;
+}
+
+.clients-grid img:hover {
+    opacity: 1;
+}
+
+/* ==================== О КОМПАНИИ ==================== */
+.about {
+    position: relative;
+    min-height: 550px;
+}
+
+.about-inner {
+    position: relative;
+}
+
+.about-bg {
+    position: relative;
+}
+
+.about-bg img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.about-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about-left {
+    flex: 1;
+    color: #fff;
+}
+
+.about-left h2 {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-left p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.about-left .btn {
+    margin-top: 15px;
+    color: #fff;
+    border-color: #e8651a;
+}
+
+.about-left .btn:hover {
+    background: #e8651a;
+}
+
+.about-right {
+    flex: 0 0 380px;
+    color: #fff;
+}
+
+.about-right h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e8651a;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #e8651a;
+    border-radius: 2px;
+}
+
+/* ==================== ПОСТАВЩИКИ ==================== */
+.suppliers {
+    padding: 80px 0;
+}
+
+.suppliers-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.suppliers-grid img {
+    height: 45px;
+    width: auto;
+    opacity: 0.7;
+}
+
+.suppliers-grid img:hover {
+    opacity: 1;
+}
+
+/* ==================== СТАТИСТИКА ==================== */
+.stats {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.stats h2 {
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 56px;
+    font-weight: 700;
+    color: #e8651a;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+/* ==================== ЦИТАТА ==================== */
+.quote {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.quote blockquote {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote-author {
+    margin-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+}
+
+/* ==================== ПРОЕКТЫ ==================== */
+.projects {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 15px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    background: #ddd;
+}
+
+.project-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.project-link {
+    font-size: 12px;
+    color: #e8651a;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ==================== ФУТЕР ==================== */
+.footer {
+    background: #f0f0f0;
+    padding: 60px 0;
+}
+
+.footer-inner {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer-form {
+    flex: 1;
+}
+
+.footer-form h2 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.footer-form .section-accent {
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+    min-height: 120px;
+    resize: vertical;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-top: 2px;
+}
+
+.footer-form .btn {
+    background: #e8651a;
+    color: #fff;
+    border-color: #e8651a;
+}
+
+.footer-form .btn:hover {
+    background: #d05a15;
+}
+
+.footer-contacts {
+    flex: 0 0 350px;
+    padding-top: 60px;
+}
+
+.footer-contacts p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    color: #e8651a;
+    font-size: 16px;
+}
+
+/* ==================== АДАПТИВ ==================== */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages-inner {
+        flex-direction: column;
+    }
+
+    .advantages-text {
+        padding: 40px 20px;
+    }
+
+    .advantages-image {
+        height: 300px;
+    }
+
+    .about-bg img {
+        height: auto;
+        min-height: 700px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .about-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+    .footer-contacts {
+        flex: none;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        gap: 40px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
