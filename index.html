@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алвин+ — строительная компания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="header">
+    <div class="header-pill">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Алвин+">
+            <span class="logo-text">АЛВИН<span class="logo-plus">+</span></span>
+        </a>
+        <nav class="nav">
+            <a href="#hero">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#about">О компании</a>
+            <a href="#projects">Проекты</a>
+        </nav>
+        <a href="#contacts" class="btn-header">Связаться с нами</a>
+    </div>
+</header>
+
+<!-- Первый экран -->
+<section class="hero" id="hero">
+    <div class="hero-circle"></div>
+    <div class="hero-line"></div>
+    <div class="container hero-content">
+        <div class="hero-left">
+            <h1>Новые<br>возможности<br>в строительстве</h1>
+            <p class="hero-desc">Динамично развивающаяся строительная компания.
+                Мы занимаемся реализацией проектов по производству
+                и монтажу светопрозрачных конструкций.</p>
+            <a href="#contacts" class="btn-primary">
+                Оставить заявку
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Услуги -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Наши услуги</span>
+            <h2>Полный спектр услуг по остеклению</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="8" y="16" width="48" height="40" rx="2"/>
+                            <line x1="8" y1="32" x2="56" y2="32"/>
+                            <line x1="24" y1="16" x2="24" y2="56"/>
+                            <line x1="40" y1="16" x2="40" y2="56"/>
+                            <polygon points="32,4 8,16 56,16"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Полный комплекс работ</h3>
+                <p>От проектирования до монтажа светопрозрачных конструкций по ГОСТу</p>
+            </div>
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="12" y="20" width="40" height="36" rx="2"/>
+                            <line x1="12" y1="36" x2="52" y2="36"/>
+                            <line x1="32" y1="20" x2="32" y2="56"/>
+                            <path d="M20 8 L32 2 L44 8"/>
+                            <circle cx="32" cy="28" r="4"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Огнестойкие конструкции</h3>
+                <p>Изготовление огнестойких светопрозрачных конструкций</p>
+            </div>
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="10" y="12" width="44" height="44" rx="2"/>
+                            <line x1="10" y1="28" x2="54" y2="28"/>
+                            <line x1="10" y1="40" x2="54" y2="40"/>
+                            <line x1="27" y1="12" x2="27" y2="56"/>
+                            <line x1="40" y1="12" x2="40" y2="56"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Конструкции из ПВХ</h3>
+                <p>Изготовление конструкций из ПВХ профиля любой сложности</p>
+            </div>
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="6" y="14" width="52" height="42" rx="2"/>
+                            <line x1="6" y1="30" x2="58" y2="30"/>
+                            <line x1="6" y1="42" x2="58" y2="42"/>
+                            <line x1="22" y1="14" x2="22" y2="56"/>
+                            <line x1="42" y1="14" x2="42" y2="56"/>
+                            <circle cx="32" cy="8" r="4"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Алюминиевые конструкции</h3>
+                <p>Изготовление внутренних светопрозрачных конструкций из алюминия</p>
+            </div>
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="8" y="24" width="48" height="32" rx="2"/>
+                            <line x1="8" y1="40" x2="56" y2="40"/>
+                            <polyline points="8,24 32,8 56,24"/>
+                            <line x1="20" y1="40" x2="20" y2="56"/>
+                            <line x1="44" y1="40" x2="44" y2="56"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Ограждения и козырьки</h3>
+                <p>Изготовление стеклянных ограждений и козырьков</p>
+            </div>
+            <div class="service-card">
+                <div class="service-top">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="#e8651a" stroke-width="2">
+                            <rect x="4" y="8" width="56" height="48" rx="2"/>
+                            <line x1="4" y1="20" x2="60" y2="20"/>
+                            <line x1="4" y1="32" x2="60" y2="32"/>
+                            <line x1="4" y1="44" x2="60" y2="44"/>
+                            <line x1="20" y1="8" x2="20" y2="56"/>
+                            <line x1="40" y1="8" x2="40" y2="56"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="service-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <h3>Фасадное остекление</h3>
+                <p>Фасадное остекление из алюминия для зданий любого масштаба</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Преимущества -->
+<section class="advantages">
+    <div class="container">
+        <div class="advantages-line"></div>
+        <div class="advantages-grid">
+            <div class="advantage-item">
+                <div class="advantage-number">01</div>
+                <h3>Качественное управление</h3>
+                <p>Профессиональный коллектив, эффективное управление ресурсами и строительными процессами.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-number">02</div>
+                <h3>Гарантия до 5 лет</h3>
+                <p>До 5 лет гарантии на работы. Оформление банковской гарантии исполнения обязательств.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-number">03</div>
+                <h3>Собственное производство</h3>
+                <p>Производство светопрозрачных конструкций любой сложности на современном оборудовании.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-number">04</div>
+                <h3>Современный продукт</h3>
+                <p>Используем только проверенные материалы и технологии российского и европейского производства.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- О компании -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-card about-text-card">
+                <span class="section-tag">О компании</span>
+                <h2>Комплексное остекление объектов любой сложности</h2>
+                <p>Компания «Алвин+» осуществляет услуги комплексного остекления объектов социальной и коммерческой инфраструктуры. В портфолио компании жилые комплексы эконом и бизнес класса, объекты образования, медицины и спорта.</p>
+                <p>Собственное производство компании изготавливает светопрозрачные конструкции на основе алюминиевых профильных систем российского и европейского производства.</p>
+                <a href="#projects" class="btn-primary">
+                    Смотреть работы
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="about-images">
+                <div class="about-img-large">
+                    <img src="about.jpg" alt="О компании">
+                </div>
+                <div class="about-img-row">
+                    <div class="about-img-small">
+                        <img src="production.jpg" alt="Производство">
+                    </div>
+                    <div class="about-img-small">
+                        <img src="hero.jpg" alt="Проекты">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Статистика -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">года работы</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">22</span>
+                <span class="stat-label">проекта</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">52</span>
+                <span class="stat-label">специалиста</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">ИТР</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Заказчики и Поставщики -->
+<section class="partners">
+    <div class="container">
+        <div class="partners-block">
+            <div class="section-header">
+                <span class="section-tag">Партнёры</span>
+                <h2>Наши заказчики</h2>
+            </div>
+            <div class="partners-card">
+                <div class="partners-logos">
+                    <img src="clients/client1.png" alt="Заказчик 1">
+                    <img src="clients/client2.png" alt="Заказчик 2">
+                    <img src="clients/client3.png" alt="Заказчик 3">
+                    <img src="clients/client4.png" alt="Заказчик 4">
+                    <img src="clients/client5.png" alt="Заказчик 5">
+                </div>
+            </div>
+        </div>
+        <div class="partners-block">
+            <div class="section-header">
+                <h2>Наши поставщики</h2>
+            </div>
+            <div class="partners-card">
+                <div class="partners-logos">
+                    <img src="suppliers/supplier1.png" alt="Поставщик 1">
+                    <img src="suppliers/supplier2.png" alt="Поставщик 2">
+                    <img src="suppliers/supplier3.png" alt="Поставщик 3">
+                    <img src="suppliers/supplier4.png" alt="Поставщик 4">
+                    <img src="suppliers/supplier5.png" alt="Поставщик 5">
+                    <img src="suppliers/supplier6.png" alt="Поставщик 6">
+                    <img src="suppliers/supplier7.png" alt="Поставщик 7">
+                    <img src="suppliers/supplier8.png" alt="Поставщик 8">
+                    <img src="suppliers/supplier9.png" alt="Поставщик 9">
+                    <img src="suppliers/supplier10.png" alt="Поставщик 10">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Проекты -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Портфолио</span>
+            <h2>Наши строительные проекты</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="projects/project1.jpg" alt="Проект 1">
+                <div class="project-info">
+                    <h4>Проект 1</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project2.jpg" alt="Проект 2">
+                <div class="project-info">
+                    <h4>Проект 2</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project3.jpg" alt="Проект 3">
+                <div class="project-info">
+                    <h4>Проект 3</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project4.jpg" alt="Проект 4">
+                <div class="project-info">
+                    <h4>Проект 4</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project5.jpg" alt="Проект 5">
+                <div class="project-info">
+                    <h4>Проект 5</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project6.jpg" alt="Проект 6">
+                <div class="project-info">
+                    <h4>Проект 6</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project7.jpg" alt="Проект 7">
+                <div class="project-info">
+                    <h4>Проект 7</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project8.jpg" alt="Проект 8">
+                <div class="project-info">
+                    <h4>Проект 8</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="projects/project9.jpg" alt="Проект 9">
+                <div class="project-info">
+                    <h4>Проект 9</h4>
+                    <a href="#" class="project-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section class="contacts" id="contacts">
+    <div class="container">
+        <div class="contacts-grid">
+            <div class="contacts-card">
+                <h2>Не нашли информацию или есть вопросы?</h2>
+                <p class="contacts-desc">Мы оперативно ответим на ваши вопросы, поможем разобраться и обработаем вашу заявку в кратчайшие сроки.</p>
+                <div class="contacts-buttons">
+                    <a href="tel:84950000000" class="contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        8 (495) 000-00-00
+                    </a>
+                    <a href="mailto:info@alvinplus.ru" class="contact-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7l-10 6L2 7"/>
+                        </svg>
+                        info@alvinplus.ru
+                    </a>
+                </div>
+                <div class="contacts-address">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e8651a" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>г. Москва, ул. Примерная, д. 10, оф. 301</span>
+                </div>
+            </div>
+            <div class="contacts-form-card">
+                <h3>Напишите нам</h3>
+                <form>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Текст сообщения"></textarea>
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Я принимаю пользовательское соглашение и политику конфиденциальности</span>
+                    </label>
+                    <button type="submit" class="btn-primary btn-submit">
+                        Отправить
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<footer class="footer">
+    <div class="footer-main">
+        <div class="container footer-inner">
+            <a href="#" class="footer-logo">
+                <span class="logo-text">АЛВИН<span class="logo-plus">+</span></span>
+            </a>
+            <nav class="footer-nav">
+                <a href="#services">Услуги</a>
+                <span>/</span>
+                <a href="#about">О компании</a>
+                <span>/</span>
+                <a href="#projects">Проекты</a>
+                <span>/</span>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="footer-contacts-info">
+                <a href="tel:84950000000">8 (495) 000-00-00</a>
+                <a href="mailto:info@alvinplus.ru">info@alvinplus.ru</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+            <span>&copy; 2024 Алвин+</span>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
